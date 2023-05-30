@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-ubj(nok^anj(&w0fxc)-$3f@g%9ljun^e$d@2&th40_v+%*z_i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'app',
-    "storage"
+    "storage",
 ]
 
 MIDDLEWARE = [
@@ -123,12 +123,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_ROOT = (os.path.join(BASE_DIR, "static"),
                )
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 # ... otras configuraciones ...
 
 # Especifica la URL a la que se redirigirá después de iniciar sesión correctamente
