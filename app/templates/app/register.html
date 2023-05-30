@@ -1,0 +1,63 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+
+{% load static %}
+<style>
+    .image-thumbail {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .list-group-item a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .slider {
+        width: auto;
+        height: auto;
+    }
+
+    .container {
+        width: 800px;
+    }
+
+    .card {
+        width: 800px;
+    }
+
+    .col-md-3 {
+        width: 800px;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp
+            <h1>
+                <b>
+                    <p> Sistema de Auditoría General</p>
+                </b>
+            </h1>
+            <div class="card">
+                <form class="form" method="POST">
+                    {%csrf_token%}
+                    {{form.as_p}}
+
+                    <button type="submit" id="submit">Registrarse</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
